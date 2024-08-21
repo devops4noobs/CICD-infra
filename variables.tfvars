@@ -1,0 +1,9 @@
+vpc-name      = "Jenkins-vpc"
+igw-name      = "Jenkins-igw"
+subnet-name   = "Jenkins-subnet"
+rt-name       = "Jenkins-route-table"
+ports         = [22, 8080, 9000, 9090, 80]
+sg-name       = "Jenkins-sg"
+key-name      = "dpp"
+iam-role      = "Jenkins-iam-role"
+instance-name = "Jenkins-server"
