@@ -1,9 +1,0 @@
-variable "vpc-name" {}
-variable "igw-name" {}
-variable "subnet-name" {}
-variable "rt-name" {}
-variable "ports" {}
-variable "sg-name" {}
-variable "key-name" {}
-variable "iam-role" {}
-variable "instance-name" {}
