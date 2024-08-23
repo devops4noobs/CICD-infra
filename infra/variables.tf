@@ -24,14 +24,6 @@ variable "iam-role" {
 
 }
 
-
-variable "sg-name" {}
-
-variable "igw-name" {}
-
-variable "rt-name" {}
-
-
 variable "ingress_cidr_from_port" {
   type        = list(number)
   description = "List of starting ports for cidr ingress rules of the EC2 security group."

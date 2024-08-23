@@ -17,11 +17,7 @@ module "ec2" {
 
 module "security-group" {
   source                   = "../modules/security-group"
-  sg-name                  = var.sg-name
-  
-  igw-name                 = var.igw-name
-  rt-name                  = var.rt-name
-  
+
   vpc_id = module.vpc.vpc_id
   ingress_cidr_from_port   = var.ingress_cidr_from_port
   ingress_cidr_to_port     = var.ingress_cidr_to_port
