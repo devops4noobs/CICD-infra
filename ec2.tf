@@ -9,7 +9,7 @@ resource "aws_instance" "ec2" {
   vpc_security_group_ids = [aws_security_group.security-group.id]
   subnet_id              = aws_subnet.public-subnet.id
   iam_instance_profile   = aws_iam_instance_profile.instance-profile.name
-
+  user_data = templatefile("./testscript.sh", {})
   //for_each               = toset(["ansible"])
   /*tags = {
     Name = "${each.key}"
