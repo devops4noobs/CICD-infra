@@ -20,32 +20,37 @@ pipeline {
         stage('Git Pulling') {
             steps {
                 git branch: 'main', url: 'https://github.com/devops4noobs/CICD-part1.git'
+                
             }
         }
+    
+            
         stage('Init') {
             steps {
                 withAWS(credentials: 'aws_creds', region: 'eu-central-1') {
-                sh 'terraform -chdir=infra init'
+                sh 'terraform -chdir=backend init'
                 }
             }
         }
+        
         stage('Validate') {
             steps {
                 withAWS(credentials: 'aws_creds', region: 'eu-central-1') {
-                sh 'terraform -chdir=infra validate'
+                sh 'terraform -chdir=backend validate'
                 }
             }
         }
         stage('Action') {
             steps {
                 withAWS(credentials: 'aws_creds', region: 'eu-central-1') {
+                sh 'terraform init'
                     script {    
                         if (params.Terraform_Action == 'plan') {
-                            sh "terraform -chdir=infra plan -var-file='../vars/variables.tfvars'"
+                            sh "terraform -chdir=backend plan"
                         }   else if (params.Terraform_Action == 'apply') {
-                            sh "terraform -chdir=infra apply -var-file='../vars/variables.tfvars' -auto-approve"
+                            sh "terraform -chdir=backend apply -auto-approve"
                         }   else if (params.Terraform_Action == 'destroy') {
-                            sh "terraform -chdir=infra destroy -var-file='../vars/variables.tfvars' -auto-approve"
+                            sh "terraform -chdir=backend destroy -auto-approve"
                         } else {
                             error "Invalid value for Terraform_Action: ${params.Terraform_Action}"
                         }
