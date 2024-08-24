@@ -1,6 +1,6 @@
 #!/bin/bash
 # For Ubuntu 22.04
-# Intsalling Java
+# InstallingI Java
 sudo apt update -y
 sudo apt install openjdk-17-jre -y
 sudo apt install openjdk-17-jdk -y
