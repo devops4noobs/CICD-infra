@@ -1,7 +1,6 @@
 variable "instance-name" {
   type        = string
   description = "The name of the resources."
-
 }
 variable "key_name" {
   type        = string
@@ -18,12 +17,7 @@ variable "instance_count" {
   description = "Count of the ec2 instances"
 }
 
-variable "subnet_id" {
-  
-}
-
-variable "vpc_security_group_id" {
-  
-}
-
+variable "subnet_id" { }
+variable "vpc_security_group_id" {}
 variable "vpc_id" {  }
+variable "iam-instance-profile" {}

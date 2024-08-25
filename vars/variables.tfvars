@@ -1,16 +1,12 @@
 igw-name    = "Jenkins-igw"
 rt-name     = "Jenkins-route-table"
-#ports         = [22, 8080, 9000, 9090, 80]
 sg-name = "Jenkins-sg"
 
 iam-role       = "Jenkins-iam-role"
 instance-name  = "Jenkins-server"
-
-
 region         = "eu-central-1"
-instance_count = 1
+instance_count = 3
 key_name       = "dpp" 
-
 # CIDR Ingress Variables all
 create_ingress_cidr      = true
 ingress_cidr_from_port   = [22, 8080, 9000, 80, 443, 9090, 9100, 9093, 3000] # List of from ports
