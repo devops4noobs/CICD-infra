@@ -1,6 +1,4 @@
-provider "aws" {
-  region = var.region
-}
+
 
 module "ec2" {
   source                 = "../modules/ec2"
@@ -8,6 +6,9 @@ module "ec2" {
   key_name               = var.key_name
   instance_count         = var.instance_count
   instance-name          = var.instance-name
+
+  iam-instance-profile = var.iam_instance_profile
+
   subnet_id              = module.vpc.public-subnet
   #vpc_security_group_ids = module.aws_security_group.vpc_security_group_ids.id
   vpc_security_group_id = module.security-group.security_group_id
@@ -36,23 +37,6 @@ module "security-group" {
 module "vpc" {
   source = "../modules/vpc"
   vpc_id = module.vpc.vpc_id
-}
-
-terraform {
-  backend "s3" {
-    bucket         = "s3-lock-devops4noobs"
-    region         = "eu-central-1"
-    key            = "state/terraform.tfstate"
-    dynamodb_table = "Lock-Files"
-    encrypt        = true
-  }
-  required_version = ">=0.13.0"
-  required_providers {
-    aws = {
-      version = ">= 2.7.0"
-      source  = "hashicorp/aws"
-    }
-  }
 }
 
 module "iam" {

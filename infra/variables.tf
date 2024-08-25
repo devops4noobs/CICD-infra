@@ -80,3 +80,7 @@ variable "create_egress_cidr" {
   type        = bool
   description = "Enable or disable CIDR block egress rules."
 }
+
+variable "iam_instance_profile" {
+  
+}
