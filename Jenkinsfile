@@ -1,7 +1,7 @@
 properties([
     parameters([
-        string(
-            defaultValue: 'dev',
+        choice(
+            choices: ['dev', 'stage', 'production'], 
             name: 'Environment'
         ),
         choice(

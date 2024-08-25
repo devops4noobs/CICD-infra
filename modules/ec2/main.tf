@@ -10,7 +10,7 @@ resource "aws_instance" "ec2" {
   subnet_id              = var.subnet_id
   #iam_instance_profile   = aws_iam_instance_profile.instance-profile.name
   count                  = var.instance_count
-  user_data              = base64encode(file("${path.module}/testscript.sh"))
+  user_data              = base64encode(file("${path.module}/userdata.sh"))
   //for_each               = toset(["ansible"])
   /*tags = {
     Name = "${each.key}"
