@@ -20,4 +20,4 @@ variable "instance_count" {
 variable "subnet_id" { }
 variable "vpc_security_group_id" {}
 variable "vpc_id" {  }
-variable "iam-instance-profile" {}
+variable "iam_instance_profile" {}

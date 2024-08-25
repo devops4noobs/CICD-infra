@@ -5,7 +5,8 @@ sg-name = "Jenkins-sg"
 iam-role       = "Jenkins-iam-role"
 instance-name  = "Jenkins-server"
 region         = "eu-central-1"
-instance_count = 3
+iam_instance_profile = "terraform"
+instance_count = 1
 key_name       = "dpp" 
 # CIDR Ingress Variables all
 create_ingress_cidr      = true

@@ -30,6 +30,6 @@ resource "aws_security_group" "security-group" {
   }
 
   tags = {
-    Name = "my security group"
+    Name = "my_security_group"
   }
 }

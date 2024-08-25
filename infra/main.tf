@@ -1,13 +1,10 @@
-
-
 module "ec2" {
   source                 = "../modules/ec2"
   region                 = var.region
   key_name               = var.key_name
   instance_count         = var.instance_count
   instance-name          = var.instance-name
-
-  iam-instance-profile = var.iam_instance_profile
+  iam_instance_profile = var.iam_instance_profile
 
   subnet_id              = module.vpc.public-subnet
   #vpc_security_group_ids = module.aws_security_group.vpc_security_group_ids.id
@@ -31,6 +28,7 @@ module "security-group" {
   egress_cidr_protocol  = var.egress_cidr_protocol
   egress_cidr_block     = var.egress_cidr_block
   create_egress_cidr    = var.create_egress_cidr
+
 
 }
 

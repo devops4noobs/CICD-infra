@@ -1,7 +1,7 @@
 resource "aws_vpc" "vpc" {
   cidr_block = "10.1.0.0/16"
   tags = {
-    Name = "my_vpc"
+    Name = "my_VPC"
   }
 }
 
@@ -11,7 +11,7 @@ resource "aws_subnet" "public-subnet" {
   map_public_ip_on_launch = true
   availability_zone       = "eu-central-1a"
   tags = {
-    Name = "public_subnet"
+    Name = "my_public_subnet"
   }
 }
 
@@ -29,7 +29,7 @@ resource "aws_route_table" "public-rt" {
     gateway_id = aws_internet_gateway.igw.id
   }
   tags = {
-    Name = "my public routing table"
+    Name = "my_public_routing_table"
   }
 }
 
