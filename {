@@ -33,4 +33,37 @@ bash: syntax error near unexpected token `}'
 bash: syntax error near unexpected token `}'
 ]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$                 }
 bash: syntax error near unexpected token `}'
-]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-work
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$             }
+bash: syntax error near unexpected token `}'
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$         }^C
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$ terraform plan -var-file=variables.tfvars
+[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1mBackend initialization required, please run "terraform init"[0m
+[31m│[0m [0m
+[31m│[0m [0m[0mReason: Unsetting the previously set backend "s3"
+[31m│[0m [0m
+[31m│[0m [0mThe "backend" is the interface that Terraform uses to store state,
+[31m│[0m [0mperform operations, etc. If this message is showing up, it means that the
+[31m│[0m [0mTerraform configuration you're using is using a custom configuration for
+[31m│[0m [0mthe Terraform backend.
+[31m│[0m [0m
+[31m│[0m [0mChanges to backend configurations require reinitialization. This allows
+[31m│[0m [0mTerraform to set up the new configuration, copy existing state, etc. Please run
+[31m│[0m [0m"terraform init" with either the "-reconfigure" or "-migrate-state" flags to
+[31m│[0m [0muse the current configuration.
+[31m│[0m [0m
+[31m│[0m [0mIf the change reason above is incorrect, please verify your configuration
+[31m│[0m [0mhasn't changed and try again. At this point, no changes to your existing
+[31m│[0m [0mconfiguration or state have been made.
+[31m╵[0m[0m
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$ ^C
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$ terraform plan -var-file=variables.tfvars[18Pgit push -u origin main[3Pcommit -m "test"add .[K
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$ git add .terraform plan -var-file=variables.tfvars[18Pgit push -u origin main[3Pcommit -m "test"
+[main 36a9a40] test
+ 6 files changed, 45 insertions(+), 5 deletions(-)
+ create mode 100644 {
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$ git commit -m "test"add .[Kterraform plan -var-file=variables.tfvars[18Pgit push -u origin main
+Enumerating objects: 22, done.
+Counting objects:   4% (1/22)Counting objects:   9% (2/22)Counting objects:  13% (3/22)Counting objects:  18% (4/22)Counting objects:  22% (5/22)Counting objects:  27% (6/22)Counting objects:  31% (7/22)Counting objects:  36% (8/22)Counting objects:  40% (9/22)Counting objects:  45% (10/22)Counting objects:  50% (11/22)Counting objects:  54% (12/22)Counting objects:  59% (13/22)Counting objects:  63% (14/22)Counting objects:  68% (15/22)Counting objects:  72% (16/22)Counting objects:  77% (17/22)Counting objects:  81% (18/22)Counting objects:  86% (19/22)Counting objects:  90% (20/22)Counting objects:  95% (21/22)Counting objects: 100% (22/22)Counting objects: 100% (22/22), done.
+Delta compression using up to 12 threads
+Compressing objects:   9% (1/11)Compressing objects:  18% (2/11)Compressing objects:  27% (3/11)Compressing objects:  36% (4/11)Compressing objects:  45% (5/11)Compressing objects:  54% (6/11)Compressing objects:  63% (7/11)Compressing obje
