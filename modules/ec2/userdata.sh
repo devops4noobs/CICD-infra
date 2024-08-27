@@ -29,7 +29,7 @@ sudo chmod 777 /var/run/docker.sock
 
 # Run Docker Container of Sonarqube
 #!/bin/bash
-docker run -d --name sonarqube -p 9000:9000 sonarqube
+docker run -itd --name Sonarqube -p 9000:9000 sonarqube:lts-community
 
 
 # Installing AWS CLI
@@ -42,19 +42,19 @@ sudo ./aws/install
 
 # Installing Terraform
 #!/bin/bash
-sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
-wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
-echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
-sudo apt update
-sudo apt-get install terraform -y
+#sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
+#wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
+#echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+#sudo apt update
+#sudo apt-get install terraform -y
 
 # Install Trivy
 #!/bin/bash
-#sudo apt-get install wget apt-transport-https gnupg lsb-release -y
-#wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
-#echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
-#sudo apt update
-#sudo apt install trivy -y
+sudo apt-get install wget apt-transport-https gnupg lsb-release -y
+wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+sudo apt update
+sudo apt install trivy -y
 
 
 # Install Helm
@@ -63,6 +63,6 @@ sudo apt-get install terraform -y
 #echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 
 #Install Ansible
-sudo apt install software-properties-common
-sudo add-apt-repository --yes --update ppa:ansible/ansible
-sudo apt install ansible
+#sudo apt install software-properties-common
+#sudo add-apt-repository --yes --update ppa:ansible/ansible
+#sudo apt install ansible
