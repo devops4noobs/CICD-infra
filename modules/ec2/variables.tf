@@ -21,3 +21,4 @@ variable "subnet_id" { }
 variable "vpc_security_group_id" {}
 variable "vpc_id" {  }
 variable "iam_instance_profile" {}
+variable "instance_type" {}

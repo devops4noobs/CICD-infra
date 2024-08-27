@@ -83,3 +83,5 @@ variable "create_egress_cidr" {
 
 variable "iam_instance_profile" {
 }
+
+variable "instance_type" {}

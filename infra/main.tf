@@ -5,7 +5,7 @@ module "ec2" {
   instance_count         = var.instance_count
   instance-name          = var.instance-name
   iam_instance_profile = var.iam_instance_profile
-
+  instance_type = var.instance_type
   subnet_id              = module.vpc.public-subnet
   #vpc_security_group_ids = module.aws_security_group.vpc_security_group_ids.id
   vpc_security_group_id = module.security-group.security_group_id

@@ -1,0 +1,36 @@
+Script started on 2024-08-27 19:22:01+03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="194" LINES="10"]
+                        if (params.Terraform_Action == 'plan') {
+                            sh "terraform plan -var-file=variables.tfvars"
+                        }   else if (params.Terraform_Action == 'apply') {
+                            sh "terraform apply -var-file=variables.tfvars -auto-approve"
+                        }   else if (params.Terraform_Action == 'destroy') {
+                            sh "terraform destroy -var-file=variables.tfvars -auto-approve"
+                        } else {
+                            error "Invalid value for Terraform_Action: ${params.Terraform_Action}"
+                        }
+                    }
+                }
+            }
+        }]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$                         if (params.Terraform_Action == 'plan') {
+bash: syntax error near unexpected token `{'
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$                             sh "terraform plan -var-file=variables.tfvars"
+sh: 0: Can't open terraform plan -var-file=variables.tfvars
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$                         }   else if (params.Terraform_Action == 'apply') {
+bash: syntax error near unexpected token `}'
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$                             sh "terraform apply -var-file=variables.tfvars -auto-approve"
+sh: 0: Can't open terraform apply -var-file=variables.tfvars -auto-approve
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$                         }   else if (params.Terraform_Action == 'destroy') {
+bash: syntax error near unexpected token `}'
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$                             sh "terraform destroy -var-file=variables.tfvars -auto-approve"
+sh: 0: Can't open terraform destroy -var-file=variables.tfvars -auto-approve
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$                         } else {
+bash: syntax error near unexpected token `}'
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$                             error "Invalid value for Terraform_Action: ${params.Terraform_Action}"
+bash: Invalid value for Terraform_Action: ${params.Terraform_Action}: bad substitution
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$                         }
+bash: syntax error near unexpected token `}'
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$                     }
+bash: syntax error near unexpected token `}'
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-workshop/terraform_cip[01;32mchaldan@DESKTOP-3ARNNFQ[00m:[01;34m~/devops/project/devops-workshop/terraform_cip[00m$                 }
+bash: syntax error near unexpected token `}'
+]0;chaldan@DESKTOP-3ARNNFQ: ~/devops/project/devops-work
