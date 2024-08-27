@@ -1,12 +1,12 @@
 #!/bin/bash
 # For Ubuntu 22.04
-# Intsalling Java
+# Install Java
 sudo apt update -y
 sudo apt install openjdk-17-jre -y
 sudo apt install openjdk-17-jdk -y
 java --version
 
-# Installing Jenkins
+# Install Jenkins
 curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
@@ -15,7 +15,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update -y
 sudo apt-get install jenkins -y
 
-# Installing Docker 
+# Install Docker 
 #!/bin/bash
 sudo apt update
 sudo apt install docker.io -y
@@ -32,7 +32,7 @@ sudo chmod 777 /var/run/docker.sock
 docker run -itd --name Sonarqube -p 9000:9000 sonarqube:lts-community
 
 
-# Installing AWS CLI
+# Install AWS CLI
 #!/bin/bash
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 sudo apt install unzip -y
@@ -40,7 +40,7 @@ unzip awscliv2.zip
 sudo ./aws/install
 
 
-# Installing Terraform
+# Install Terraform
 #!/bin/bash
 #sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 #wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
