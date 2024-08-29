@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "s3" {
   bucket = "s3-locks-devops4noobs"
   force_destroy = true
   tags = {
-    Name        = "My bucket"
+    Name        = "bucket"
   }
 }
 
