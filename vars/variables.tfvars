@@ -22,4 +22,4 @@ egress_cidr_from_port = [0]
 egress_cidr_to_port   = [0]
 egress_cidr_protocol  = ["-1"]
 egress_cidr_block     = ["0.0.0.0/0"]
-instance_type = "t2.medium"
+instance_type = "t2.large"
