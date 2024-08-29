@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "s3" {
-  bucket = "s3-locks-devops4noobs"
+  bucket = "s3-lock-devops4noobs"
   force_destroy = true
   tags = {
     Name        = "bucket"
@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "s3" {
 }
 
 resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
-  name = "Locks-Files"
+  name = "Lock-Files"
   hash_key = "LockID"
   read_capacity = 20
   write_capacity = 20

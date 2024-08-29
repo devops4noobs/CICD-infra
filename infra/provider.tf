@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket         = "s3-locks-devops4noobs"
+    bucket         = "s3-lock-devops4noobs"
     region         = "eu-central-1"
     key            = "state/terraform.tfstate"
     dynamodb_table = "Lock-Files"
