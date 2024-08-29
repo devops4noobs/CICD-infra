@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "s3" {
 }
 
 resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
-  name = "Lock-Files"
+  name = "Locks-Files"
   hash_key = "LockID"
   read_capacity = 20
   write_capacity = 20
