@@ -11,6 +11,9 @@ resource "aws_instance" "ec2" {
   iam_instance_profile   = var.iam_instance_profile
   count                  = var.instance_count
   user_data              = base64encode(file("${path.module}/userdata.sh"))
+  root_block_device {
+    volume_size = 30
+  }
   //for_each               = toset(["ansible"])
   /*tags = {
     Name = "${each.key}"
